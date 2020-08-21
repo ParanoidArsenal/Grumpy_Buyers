@@ -1,0 +1,18 @@
+.page-404{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding:30px 10px;
+    flex-wrap: wrap;
+}
+
+.page-404 h1{
+    font-size: 3.5em;
+    color:rgb(158, 12, 12);
+    margin-bottom: 10px;
+}
+
+.page-404 h3{
+    font-size: 2em;
+}

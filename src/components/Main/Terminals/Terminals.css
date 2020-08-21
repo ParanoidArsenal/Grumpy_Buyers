@@ -1,0 +1,100 @@
+.terminal-form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+
+.terminal-form{
+    padding:15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* width:30%; */
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: var(--main-color);
+    color:white;
+  }
+
+  /* .terminal-form *{
+     font-size: 1.05em; 
+  } */
+
+
+  .terminal-form input{
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+
+  .terminal-form input:focus{
+    outline: none;
+    box-shadow: 0 0 8px rgba(71, 71, 71, 0.5);
+  }
+
+  .terminal-form input[type=submit]{
+    background-color: var(--main-dark-color);
+    color:white;
+    border: 1px solid rgba(121, 107, 107, 0);
+    transition: all 0.2s;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+
+  .terminal-form input[type=submit]:hover{
+    outline: none;
+    background-color:white;
+    color: var(--main-dark-color);
+  }
+  .terminal-form input[type=submit]:active{
+    outline: none; 
+    background-color:rgb(194, 194, 194);
+    color: var(--main-dark-color);
+  }
+
+  
+
+  .terminal-form label{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+  }
+  
+  .terminal-form label *{
+    margin: 5px 0px;
+  }
+
+
+  @media screen and (min-width: 1200px) {
+    .terminal-form{
+      width:900px;
+    }
+  }
+  
+  @media screen and (min-width: 992px) and (max-width: 1200px) {
+    .terminal-form{
+      background-color:red;
+      width:100%;
+    }
+  }
+  
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    .terminal-form{
+      width:90%;
+    }
+  }
+  
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+    .terminal-form{
+      width:90%;
+    }
+  }
+  
+  @media screen and (max-width: 575px) {
+    .terminal-form{
+      width:90%;
+    }
+  }

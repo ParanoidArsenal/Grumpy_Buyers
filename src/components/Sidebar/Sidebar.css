@@ -1,0 +1,114 @@
+:root{
+    --sidebar-width: 20vmin;
+    --main-color:rgb(90, 184, 163);
+    --main-dark-color: rgb(71, 150, 133);
+
+}
+
+.main-page-container{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height:80vh;
+    margin-left: var(--sidebar-width);
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.sidebar-container{
+    position: fixed;
+    /* border-right: 5px solid rgba(255, 237, 187, 0.938); */
+    top:0;
+    left:0;
+    bottom:0;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width:var(--sidebar-width);
+    min-width:200px;
+    height:100vh;
+    min-height:300px;
+    background-color: var(--main-color);
+    color: white;
+    box-sizing: border-box;
+    box-shadow: 0 0 4px rgba(71, 71, 71, 0.5);
+    overflow: hidden;
+}
+
+.sidebar-container footer{
+    display: flex;
+    /* padding:20px 30px 10px 0px; */
+    /* justify-content: flex-end; */
+    justify-content: center;
+    padding: 20px 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.sidebar-container nav{
+    display:flex;
+    flex-grow: 6;
+    flex-direction: column;
+    flex-wrap: wrap;
+    list-style-type: none;
+    font-size: 1.4em;
+    /* font-size: 20px; */
+    text-decoration: none;
+    /* height: 100%; */
+    box-sizing: border-box;
+    overflow: hidden;
+    min-width:110px;
+    
+}
+
+.sidebar-container nav *{
+    /* display: block; */
+    padding:10px 20px;
+    margin:10px 5px;
+    text-decoration: none;
+    color: white;
+    box-sizing: border-box;
+    /* border: 2px solid rgba(255, 237, 187, 0.938); */
+    border-radius: 15px;
+    box-shadow: 0 0 4px rgba(71, 71, 71, 0.5);
+    background-color: var(--main-dark-color);
+}
+
+.sidebar-container nav *:hover{
+    text-decoration: none;
+    /* background-color: rgba(255, 237, 187, 0.938); */
+    background-color: white;
+    color:var(--main-dark-color);
+    /* opacity: 0.9; */
+    box-shadow: 0 0 8px rgba(71, 71, 71, 0.5);
+    
+
+}
+
+
+.thumbnail{
+    margin:20px 10px;
+    /* padding:5px; */
+    min-width:90px;
+    box-sizing: border-box;
+    /* border: 4px solid rgba(255, 237, 187, 0.938); */
+    border: 4px solid white;
+    border-radius: 20px;
+    box-shadow: 0 0 4px rgba(71, 71, 71, 0.5);
+    display:flex;
+    max-width:45%;
+    overflow: hidden;
+    transition: all 0.2s;
+    
+}
+
+.thumbnail:hover{
+    opacity: 0.9;
+    box-shadow: 0 0 15px rgba(71, 71, 71, 0.5);
+}
+
+.thumbnail img{
+    width:100%;
+}

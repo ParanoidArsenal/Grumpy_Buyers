@@ -1,25 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter, Route, Switch, Redirect} from 'react-router-dom';
+import {Login} from './components/Login/Login';
+import {Main} from './components/Main/Main';
+import {PageNotFound} from './components/PageNotFound/PageNotFound';
+import {homeURL} from './helper';
 
 function App() {
+//   const [loggedIn, setLoggedIn] = useState(false);
+//   useEffect(() =>{
+//     const session = getSession();
+//     if(!session){
+//         // history.push(homeURL + '/Login');
+        
+//     }
+// }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Switch>
+            <Route exact path= {"/"}> 
+              <Redirect to="/Main"/> 
+            </Route> 
+            <Route path= {"/Main"} component = {Main} />
+            <Route path= {"/Login"} component = {Login} />
+            <Route path={"/404"} component={PageNotFound} />
+            <Redirect to={"/404"} />
+      </Switch>
+    </BrowserRouter>
   );
 }
 
