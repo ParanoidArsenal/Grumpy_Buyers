@@ -1,5 +1,12 @@
 
-.user-list-btn{
-    padding: 12px 20px;
-    margin: 8px 0;
+.main-page-container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:80vh;
+    margin-left: var(--sidebar-width);
+    width:100%;
+    padding: 0 20px;
+    /* box-sizing: border-box; */
 }
