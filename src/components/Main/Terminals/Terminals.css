@@ -1,33 +1,37 @@
-.terminal-form-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
+.terminals-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    column-gap: 10px;
+    row-gap: 15px;
+    width:100%;
+    padding:15px;
+    /* margin: 10px 15px; */
   }
-
 
 
 .terminal-form{
     padding:15px;
+    margin: 10px 15px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    /* width:30%; */
-    background-color: rgb(255, 255, 255);
+    width:100%;
     border: 1px solid #ccc;
     border-radius: 8px;
     background-color: var(--main-color);
+    /* background-color: var(--secondary-color); */
     color:white;
+    box-sizing: border-box;
   }
 
-  /* .terminal-form *{
-     font-size: 1.05em; 
-  } */
-
+  .terminal-form > *{
+     margin:5px 10px;
+  }
 
   .terminal-form input{
     padding: 12px 20px;
-    margin: 8px 0;
+    /* margin: 5px 0; */
     border: 1px solid #ccc;
     border-radius: 8px;
   }
@@ -39,6 +43,7 @@
 
   .terminal-form input[type=submit]{
     background-color: var(--main-dark-color);
+    /* background-color: var(--secondary-dark-color); */
     color:white;
     border: 1px solid rgba(121, 107, 107, 0);
     transition: all 0.2s;
@@ -57,26 +62,35 @@
     color: var(--main-dark-color);
   }
 
-  
 
   .terminal-form label{
     display: flex;
     flex-direction: column;
     text-align: start;
+    justify-content: space-between;
+    flex-grow: 1;
   }
   
   .terminal-form label *{
-    margin: 5px 0px;
+    margin-top: 5px;
   }
 
+  .terminals-title{
+    display:flex;
+    width:100%;
+    box-sizing: border-box;
+    justify-content: center;
+    color: var(--main-dark-color);
+  }
 
-  @media screen and (min-width: 1200px) {
+  /* @media screen and (min-width: 1200px) {
     .terminal-form{
-      width:900px;
+      width:1200px;
+      background-color:forestgreen;
     }
-  }
+  } */
   
-  @media screen and (min-width: 992px) and (max-width: 1200px) {
+  /* @media screen and (min-width: 992px) and (max-width: 1200px) {
     .terminal-form{
       background-color:red;
       width:100%;
@@ -85,18 +99,21 @@
   
   @media screen and (min-width: 768px) and (max-width: 991px) {
     .terminal-form{
-      width:90%;
+      width:100%;
+      background-color:darkgoldenrod;
     }
   }
   
   @media screen and (min-width: 576px) and (max-width: 767px) {
     .terminal-form{
-      width:90%;
+      width:100%;
+      background-color:aqua
     }
   }
   
   @media screen and (max-width: 575px) {
     .terminal-form{
-      width:90%;
+      width:100%;
+      background-color:salmon
     }
-  }
+  } */

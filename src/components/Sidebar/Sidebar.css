@@ -1,7 +1,11 @@
 :root{
-    --sidebar-width: 20vmin;
-    --main-color:rgb(90, 184, 163);
-    --main-dark-color: rgb(71, 150, 133);
+    --sidebar-width: max(20vmin,200px);
+    /* --main-color:rgb(90, 184, 163); */
+    /* --main-dark-color: rgb(71, 150, 133); */
+    --main-color:rgb(127, 211, 164);
+    --main-dark-color: rgb(92, 156, 120);
+    --secondary-color: #ffa8c5d2;
+    --secondary-dark-color: #fda870b0;
 
 }
 
