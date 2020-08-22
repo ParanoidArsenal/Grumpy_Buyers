@@ -33,9 +33,7 @@ const Main = ({history}) => {
                 <Terminals />
             </Route>
             <Route exact path = {`${path}/buyers`}>
-                <h1>
-                    buyers
-                </h1>
+                <Buyers />
             </Route>
 
         </Switch>
