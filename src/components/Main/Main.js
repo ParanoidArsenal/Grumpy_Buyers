@@ -25,16 +25,15 @@ const Main = ({history}) => {
         <div className = 'main-page-container'>
         <Switch>
             <Route exact path ={path}> 
-                <h1>
-                    Авторизация проведена успешно!
-                </h1>
+                <Redirect to = {`${path}/buyers`}/>
             </Route>
-            <Route exact path = {`${path}/terminals`}>
+            <Route path = {`${path}/terminals`}>
                 <Terminals />
             </Route>
-            <Route exact path = {`${path}/buyers`}>
+            <Route path = {`${path}/buyers`}>
                 <Buyers />
             </Route>
+            <Redirect to={"/404"} />
 
         </Switch>
 

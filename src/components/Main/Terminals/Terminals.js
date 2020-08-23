@@ -13,7 +13,6 @@ const Terminals = () => {
     const handleClick = (e) => {
         e.preventDefault();
         let newTerminal = {name, description, id: "terminal-" + nanoid()};
-        console.log(terminalList.length);
         setTerminalList([...terminalList, newTerminal])
     };
 
@@ -43,7 +42,7 @@ const Terminals = () => {
                 </label>
                 <input className = {`terminal-btn`} type="submit" value="Добавить" onClick={(e) => handleClick(e)} />
             </form>
-            <h1 className="terminals-title">Список терминалов:</h1>
+            <h1 className="title">Список терминалов:</h1>
             <div className="terminals-container">
                 {terminalListComponent}
             </div>

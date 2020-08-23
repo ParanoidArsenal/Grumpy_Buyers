@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from 'react';
+import React from 'react';
 import './Terminal.css';
 
 const Terminal = ({name, description, id, removeItem}) => {

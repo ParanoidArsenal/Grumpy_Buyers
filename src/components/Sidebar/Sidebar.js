@@ -1,10 +1,30 @@
-import React, { useEffect} from 'react';
+import React, {useState, useRef, useEffect} from 'react';
 import './Sidebar.css';
-import {homeURL, getSession} from '../../helper';
 
 const Sidebar = ({ avatar, login, children}) => {
+
+    useEffect(() => {
+        function handleResize() {
+          if(window.innerWidth >=700){
+            const container = usersContainerRef.current;
+            container.classList.remove('is-open');
+          }
+            
+        }
+        window.addEventListener('resize', handleResize)
+      })
+
+
+    const usersContainerRef = useRef(null);
+
+    const showUserSidebar = () => {
+        const container = usersContainerRef.current;
+        container.classList.toggle('is-open');
+    };
+
     return(
-        <div className = 'sidebar-container'>
+        <>
+        <div className = 'sidebar-container' ref = {usersContainerRef}>
             <div className = 'thumbnail'>
                 <img src={avatar} />
             </div>
@@ -16,6 +36,10 @@ const Sidebar = ({ avatar, login, children}) => {
 
             </footer>
         </div>
+        <button className= 'sidebarToggler' onClick ={(event) => showUserSidebar()}>
+        <span>≡</span>
+        </button>
+        </>
     );
     
 };
